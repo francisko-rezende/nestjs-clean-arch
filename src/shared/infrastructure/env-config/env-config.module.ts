@@ -14,11 +14,11 @@ export class EnvConfigModule {
           envFilePath: [
             join(__dirname, `../../../../.env.${process.env.NODE_ENV}`),
           ],
-          isGlobal: true, // Make ConfigModule global
+          isGlobal: true,
         }),
       ],
       providers: [EnvConfigService],
-      exports: [EnvConfigService], // Only export your service
+      exports: [EnvConfigService],
     };
   }
 }
