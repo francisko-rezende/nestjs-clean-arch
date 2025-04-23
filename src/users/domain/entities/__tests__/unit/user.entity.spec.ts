@@ -15,10 +15,17 @@ describe('UserEntity unit tests', () => {
     sut = new UserEntity(props)
   })
 
-  it('Constructor method', () => {
+  it('should have a working constructor method', () => {
     expect(sut.props.name).toEqual(props.name)
     expect(sut.props.email).toEqual(props.email)
     expect(sut.props.password).toEqual(props.password)
     expect(sut.props.createdAt).toBeInstanceOf(Date)
+  })
+
+  it('should return correct values via getters', () => {
+    expect(sut.name).toBe(props.name)
+    expect(sut.email).toBe(props.email)
+    expect(sut.password).toBe(props.password)
+    expect(sut.createdAt).toBeInstanceOf(Date)
   })
 })
